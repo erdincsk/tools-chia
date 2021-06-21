@@ -32,3 +32,9 @@ alias chia-start-hpool='cd /home/erdinc/tools-chia/hpool-miner; ./hpool-miner-ch
 
 #chia-scripts
 alias chia-addnodes='cd ~/chia-blockchain; ./addNodes.sh'
+
+#mounts
+alias mount-ws='sudo umount -l /home/erdinc/disks-ws; sudo sshfs -o allow_other,Compression=no,auto_cache,IdentityFile=/home/erdinc/.ssh/id_rsa -p 2284 erdinc@ws.local:/home/erdinc/disks /home/erdinc/disks-ws/'
+alias mount-server='sudo umount -l /home/erdinc/disks-server; sudo sshfs -o allow_other,Compression=no,auto_cache,IdentityFile=/home/erdinc/.ssh/id_rsa erdinc@server.local:/home/erdinc/disks /home/erdinc/disks-server/'
+
+
