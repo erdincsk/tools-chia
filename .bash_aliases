@@ -27,11 +27,12 @@ alias chia-total-plot-time='tail -f -n +1 ~/chia-plotter-log/log.log | grep "Tot
 alias chia-run-plotstatus-app='cd /home/erdinc/tools-chia/Chia-Plot-Status; ./ChiaPlotStatusGUI/bin/Release/net5.0/ChiaPlotStatus'
 
 #chia-tools-production
-alias chia-start-plot='rm -rf /home/erdinc/disks/temp_1tb/plot-k32*.tmp; cd /home/erdinc/tools-chia/chia-plotter; ./build/chia_plot -r 12 -t /home/erdinc/disks/temp_500gb/ -d /home/erdinc/disks/11_8TB/plots/ -p 8c6549542878b645ce62436022f216ff309fe597c46641adc3901332931955d2e5a6ef9ac1c1cff52b434fee7b724be5 -f ade177444a099ca9ea5cdf6361ac62b746fffdcb2be1e7c997f389f5f7306d46307be2b1e91fa6d70e8b04b7901b0f30 -n -1 |& tee -a log.log'
+alias start-plot='rm -rf /home/erdinc/disks/temp_1tb/plot-k32*.tmp; cd /home/erdinc/tools-chia/chia-plotter; ./build/chia_plot -n -1 -r 12 -t /home/erdinc/disks/temp_1tb/ -d /home/erdinc/disks/temp_500gb/move_plot/ -c xch1r38p0ngez2ulufejwuwvh9u7azs7fq9kvh00na6wd0rnsmcytdgsr7k4ep -f b89945a2eb2e329a511d1c3be2c0ae440b9f18eced90767d70e905f86275571f2c386a1e3c0d34b6a8bd0bc9a67bd9e0 |& tee -a ~/chia-plotter-log/log.log'
 alias chia-start-hpool='cd /home/erdinc/tools-chia/hpool-miner; ./hpool-miner-chia --config config.yaml'
 
 #chia-scripts
 alias chia-addnodes='cd ~/chia-blockchain; ./addNodes.sh'
+
 
 #mounts
 alias mount-ws='sudo umount -l /home/erdinc/disks-ws; sudo sshfs -o allow_other,Compression=no,auto_cache,IdentityFile=/home/erdinc/.ssh/id_rsa -p 2284 erdinc@ws.local:/home/erdinc/disks /home/erdinc/disks-ws/'
